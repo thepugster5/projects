@@ -1,0 +1,161 @@
+<!-- Scripts ----------------------------------------------------------->
+
+<!-- Variables -->
+<script>
+    let clicks = 0
+</script>
+
+<!-- +1 Click -->
+<script>
+    function add1() {
+        clicks += 1
+        console.log(clicks)
+    }
+</script>
+
+<!-- +2 Clicks -->
+<script>
+    function add2() {
+        clicks += 2
+        console.log(clicks)
+    }
+</script>
+
+<!-- +3 Clicks -->
+<script>
+    function add3() {
+        clicks += 3
+        console.log(clicks)
+    }
+</script>
+
+<!-- +4 Clicks -->
+<script>
+    function add4() {
+        clicks += 4
+        console.log(clicks)
+    }
+</script>
+
+<!-- +5 Clicks -->
+<script>
+    function add5() {
+        clicks += 5
+        console.log(clicks)
+    }
+</script>
+
+<!-- +6 Clicks -->
+<script>
+    function add6() {
+        clicks += 6
+        console.log(clicks)
+    }
+</script>
+
+<!-- +7 Clicks -->
+<script>
+    function add7() {
+        clicks += 7
+        console.log(clicks)
+    }
+</script>
+
+<!-- +8 Clicks -->
+<script>
+    function add8() {
+        clicks += 8
+        console.log(clicks)
+    }
+</script>
+
+<!-- +9 Clicks -->
+<script>
+    function add9() {
+        clicks += 9
+        console.log(clicks)
+    }
+</script>
+
+<!-- +10 Clicks -->
+<script>
+    function add10() {
+        clicks += 10
+        console.log(clicks)
+    }
+</script>
+
+<!-- Reset Clicks -->
+<script>
+    function resetClicks() {
+        clicks = 0
+        alert("Your clicks have been reset to 0.")
+    }
+</script>
+
+<!-- Check Clicks -->
+<script>
+    function checkClicks() {
+        alert("Clicks: " + clicks)
+    }
+</script>
+
+<!-- Clicker Button Style ---------------------------------------------->
+<style>
+    .clickerButton {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        background-color: #fc4e42;
+        border-radius: 20px;
+        border: none;
+        color: #ffffff;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .clickerButton:hover {
+        filter: brightness(85%);
+    }
+
+    .utilityButton {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        background-color: #429ffc;
+        border-radius: 20px;
+        border: none;
+        color: #ffffff;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .utilityButton:hover {
+        filter: brightness(85%);
+    }
+</style>
+
+<!-- Clicker Buttons --------------------------------------------------->
+<button class="clickerButton" onclick="add1()">+1 Click</button>
+
+<button class="clickerButton" onclick="add2()">+2 Clicks</button>
+
+<button class="clickerButton" onclick="add3()">+3 Clicks</button>
+
+<button class="clickerButton" onclick="add4()">+4 Clicks</button>
+
+<button class="clickerButton" onclick="add5()">+5 Clicks</button>
+
+<button class="clickerButton" onclick="add6()">+6 Clicks</button>
+
+<button class="clickerButton" onclick="add7()">+7 Clicks</button>
+
+<button class="clickerButton" onclick="add8()">+8 Clicks</button>
+
+<button class="clickerButton" onclick="add9()">+9 Clicks</button>
+
+<button class="clickerButton" onclick="add10()">+10 Clicks</button>
+
+<button class="clickerButton" onclick="resetClicks()">Reset Clicks</button>
+
+<button class="utilityButton" onclick="checkClicks()">Check Clicks</button>
