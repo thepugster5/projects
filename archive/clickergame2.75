@@ -1,0 +1,248 @@
+<!-- Variables -->
+<script>
+    let clicks = 0
+    let lifetimeClicks = 0
+    let multiplier = 1
+    let multPrice = 20
+    let clickerOn = false
+    let autoClicker
+</script>
+
+<!-- Achievements -->
+<script>
+    let achievements = {
+        "hundredClicks": "Not Owned",
+        "fiveHundredClicks": "Not Owned",
+        "oneThousandClicks": "Not Owned",
+        "twoMultiplier": "Not Owned",
+        "tenMultiplier": "Not Owned"
+    }
+</script>
+
+<!-- Displays -->
+<script>
+    function displayClicks() {
+        const clickDisplay = document.querySelector("#clickDisplay")
+        clickDisplay.innerText = "Clicks: " + clicks
+    }
+
+    function displayPrice() {
+        multPrice = multiplier * 20
+        const priceDisplay = document.querySelector("#priceDisplay")
+        priceDisplay.innerText = "Price: " + multPrice
+    }
+</script>
+
+<!-- Click -->
+<script>
+    function addClick() {
+        clicks += multiplier
+        lifetimeClicks += multiplier
+        console.log(clicks)
+
+        displayClicks()
+        displayPrice()
+
+        if (achievements["hundredClicks"] === "Owned") {
+            // Ensures it only runs if hundredClicks is false
+        } else if (lifetimeClicks >= 100) {
+            alert("Achievement Unlocked: 100 Clicks!")
+            achievements["hundredClicks"] = "Owned"
+        }
+
+        if (achievements["fiveHundredClicks"] === "Owned") {
+            // Ensures it only runs if fiveHundredClicks if false
+        } else if (lifetimeClicks >= 500) {
+            alert("Achievement Unlocked: 500 Clicks!")
+            achievements["fiveHundredClicks"] = "Owned"
+        }
+
+        if (achievements["oneThousandClicks"] === "Owned") {
+            // Ensures it only runs if oneThousandClicks if false
+        } else if (lifetimeClicks >= 1000) {
+            alert("Achievement Unlocked: 1000 Clicks!")
+            achievements["oneThousandClicks"] = "Owned"
+        }
+    }
+</script>
+
+<!-- Reset Clicks -->
+<script>
+    function resetClicks() {
+        clicks = 0
+        alert("Your clicks have been reset to 0.")
+        displayClicks()
+    }
+</script>
+
+<!-- Buy Multiplier -->
+<script>
+    function buyMult() {
+        multPrice = multiplier * 20
+
+        if (clicks >= multPrice) {
+            clicks -= multPrice
+            console.log("Clicks: " + clicks)
+            multiplier += 1
+            console.log("Multiplier: " + multiplier)
+            alert("Your multiplier is now " + multiplier + ". Clicks remaining: " + clicks + ".")
+
+            displayClicks()
+            displayPrice()
+
+            if (achievements["twoMultiplier"] === "Owned") {
+                // Ensures it only runs if twoMultiplier is false
+            } else if (multiplier >= 2) {
+                achievements["twoMultiplier"] = "Owned"
+                alert("Achievement Unlocked: 2 Multiplier")
+            }
+
+            if (achievements["tenMultiplier"] === "Owned") {
+                // Ensures it only runs if tenMultiplier is false
+            } else if (multiplier >= 10) {
+                achievements["tenMultiplier"] = "Owned"
+                alert("Achievement Unlocked: 10 Multiplier")
+            }
+            
+        } else {
+            alert("You have (" + clicks + "/" + multPrice + ").")
+        }
+    }
+</script>
+
+<!-- Change Multiplier -->
+<script>
+    function changeMult() {
+        const multiText = document.querySelector("#multiChanger").value
+        multiplier = parseInt(multiText)
+        displayPrice()
+    }
+</script>
+
+<!-- Check Multiplier -->
+<script>
+    function checkMult() {
+        alert("Multiplier: " + multiplier)
+    }
+</script>
+
+<!-- Check Stats -->
+<script>
+    function statCheck() {
+        alert("STATS" + "\nClicks: " + clicks + "\nLifetime Clicks: " + lifetimeClicks + "\nMultiplier: " + multiplier)
+    }
+</script>
+
+<!-- Check Achievements -->
+<script>
+    function achievementCheck() {
+        alert("ACHIEVEMENTS" + 
+                "\n100 Clicks: " + achievements["hundredClicks"] + 
+                "\n500 Clicks: " + achievements["fiveHundredClicks"] + 
+                "\n1000 Clicks: " + achievements["oneThousandClicks"] + 
+                "\n2 Multiplier: " + achievements["twoMultiplier"] + 
+                "\n10 Multiplier: " + achievements["tenMultiplier"])
+    }
+</script>
+
+<!-- Toggle Autoclicker -->
+<script>
+    function toggleClicker() {
+        if (clickerOn === false) {
+            autoClicker = setInterval(addClick, 1000)
+            clickerOn = true
+        } else if (clickerOn) {
+            clearInterval(autoClicker)
+            clickerOn = false
+        }
+    }
+</script>
+
+<!-- Clicker Button Style ---------------------------------------------->
+<style>
+    .defaultButton {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        background-color: #fc4e42;
+        border-radius: 20px;
+        border: none;
+        color: #ffffff;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .defaultButton:hover {
+        filter: brightness(85%);
+    }
+
+    .utilityButton {
+        width: 100px;
+        height: 50px;
+        margin: 5px;
+        background-color: #429ffc;
+        border-radius: 20px;
+        border: none;
+        color: #ffffff;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .utilityButton:hover {
+        filter: brightness(85%);
+    }
+
+    .textBox {
+        font-family: "Comic Sans MS";
+        font-size: 30px;
+        background-color: #ededed;
+        border-radius: 20px;
+    }
+</style>
+
+<!-- Main Buttons Title Card -->
+<span style="font-size: 30px; font-family: Comic Sans Ms"><b>BUTTONS</b></span>
+
+<br>
+
+<!-- Main Buttons ------------------------------------------------------>
+<button class="defaultButton" onclick="addClick()">Click Me!</button>
+
+
+<button class="defaultButton" onclick="resetClicks()">Reset Clicks</button>
+
+<span class="textBox" id="clickDisplay">Clicks: [Clicks]</span>
+
+<br>
+<br>
+
+<!-- Shop Title Card -->
+<span style="font-size: 30px; font-family: Comic Sans MS;"><b>SHOP</b></span>
+
+<br>
+
+<!-- Shop Buttons ------------------------------------------------------>
+<button class="defaultButton" onclick="buyMult()">+1 Multiplier</button>
+
+<span class="textBox" id="priceDisplay">Price: [Price]</span>
+
+<br>
+<br>
+
+<!-- Utilities Title Card -->
+<span style="font-size: 30px; font-family: Comic Sans MS;"><b>UTILITIES</b></span>
+
+<br>
+
+<!-- Utilities Buttons ------------------------------------------------->
+<input type="number" id="multiChanger" class="textBox" style="width: 100px;">
+
+<button class="utilityButton" onclick="changeMult()">Submit</button>
+
+<button class="utilityButton" onclick="checkMult()">Check Multiplier</button>
+
+<button class="utilityButton" onclick="statCheck()">Stats</button>
+
+<button class="utilityButton" onclick="achievementCheck()" style="width: 120px;">Achievements</button>
+
+<button class="utilityButton" onclick="toggleClicker()">Autoclicker</button>
