@@ -1,0 +1,42 @@
+<style>
+    .lock {
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+        margin: 5px;
+        cursor: pointer;
+        background-color: whitesmoke;
+        font-size: 70px;
+    }
+
+    .lock:hover {
+        filter: brightness(85%);
+    }
+</style>
+
+<button class="lock" id="slot1" onclick="cycle(this)">0</button>
+<button class="lock" id="slot2" onclick="cycle(this)">0</button>
+<button class="lock" id="slot3" onclick="cycle(this)">0</button>
+<button class="lock" id="slot4" onclick="cycle(this)">0</button>
+<br>
+<button class="lock" onclick="checkCombo()" style="height: 50px; font-size: 20px;">Submit</button>
+
+<script defer>
+    function cycle(button) {
+        let slot = parseInt(button.innerText)
+        slot = (slot + 1) % 10
+        button.innerText = slot
+    }
+
+    function checkCombo() {
+        if (slot1.innerText == 6) {
+            if (slot2.innerText == 9) {
+                if (slot3.innerText == 6) {
+                    if (slot4.innerText == 9) {
+                        alert("Congratulations! You opened the lock!")
+                    }
+                }
+            }
+        }
+    }
+</script>
