@@ -1,0 +1,46 @@
+<!-- Click Me! Button -->
+<button style="width: 200px; height: 200px; font-size: 30px;" onclick="countClicks()"><b>Click Me!</b></button>
+
+<br>
+<br>
+
+<!-- 100 Clicks Required Button -->
+<button style="width: 200px; height: 200px; font-size: 30px;" onclick="checkClicks()"><b>Click Me (100 Required)!</b></button>
+
+<br>
+<br>
+
+<!-- Reset Clicks Button -->
+<button style="width: 200px; height: 200px; font-size: 30px;" onclick="resetClicks()"><b>Reset Clicks</b></button>
+
+
+<!-- Click Me Button Script-->
+<script>
+    let clicks = 0;
+
+    function countClicks() {
+        clicks += 1;
+        console.log("Clicks: " + clicks);
+    }
+</script>
+
+
+<!-- 100 Clicks Required Button Script -->
+<script>
+    function checkClicks() {
+        if (clicks >= 100) {
+            alert("Congrats!");
+        } else {
+            alert("Keep going! (" + clicks + "/100)");
+        }
+}
+</script>
+
+
+<!-- Reset Clicks Button Script -->
+<script>
+    function resetClicks() {
+        clicks = 0;
+        alert("Your clicks have been reset to 0.");
+    }
+</script>
