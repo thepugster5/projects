@@ -1,0 +1,90 @@
+<!-- Variables -->
+<script>
+    let number1 = 0;
+    let number2 = 0;
+    let answer = null;
+</script>
+
+<!-- Number 1 -->
+<script>
+    function numberOneUp() {
+        number1 += 1;
+        console.log(number1);
+    }
+
+    function numberOneDown() {
+        number1 -= 1;
+        console.log(number1);
+    }
+</script>
+
+<!-- Number 2 -->
+<script>
+    function numberTwoUp() {
+        number2 += 1;
+        console.log(number2);
+    }
+
+    function numberTwoDown() {
+        number2 -= 1;
+        console.log(number2);
+    }
+</script>
+
+<!-- Addition -->
+<script>
+    function addNumbers() {
+        console.log(number1 + number2);
+        alert(number1 + number2);
+    }
+</script>
+
+<!-- Subtraction -->
+<script>
+    function subNumbers() {
+        console.log(number1 - number2);
+        alert(number1 - number2);
+    }
+</script>
+
+<!-- Multiplication -->
+<script>
+    function multNumbers() {
+        console.log(number1 * number2);
+        alert(number1 * number2);
+    }
+</script>
+
+<!-- Division -->
+<script>
+    function divNumbers() {
+        console.log(number1 / number2);
+        alert(number1 / number2);
+    }
+</script>
+
+<!---------------------------------------------------------------------->
+
+<button style="height: 75px; width: 75px; font-size: 70px;" onclick="numberOneUp()">+</button>
+
+<button style="height: 75px; width: 75px; font-size: 70px;" onclick="numberOneDown()">-</button>
+
+<br>
+<br>
+
+<button style="height: 75px; width: 75px; font-size: 70px;" onclick="numberTwoUp()">+</button>
+
+<button style="height: 75px; width: 75px; font-size: 70px;" onclick="numberTwoDown()">-</button>
+
+<br>
+<br>
+<br>
+<br>
+
+<button style="height: 75px; width: 75px; font-size: 70px;" onclick="addNumbers()">+</button>
+
+<button style="height: 75px; width: 75px; font-size: 70px;" onclick="subNumbers()">-</button>
+
+<button style="height: 75px; width: 75px; font-size: 70px;" onclick="multNumbers()">X</button>
+
+<button style="height: 75px; width: 75px; font-size: 70px;" onclick="divNumbers()">/</button>
