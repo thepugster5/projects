@@ -1,0 +1,28 @@
+<style>
+    .button {
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+        margin: 5px;
+        cursor: pointer;
+        background-color: whitesmoke;
+        font-size: 35px;
+    }
+
+    .button:hover {
+        filter: brightness(85%);
+    }
+</style>
+
+<button class="button" onclick="colorChange()">Generate Color</button>
+
+<script defer>
+    const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+
+    // Color Change Function
+    function colorChange() {
+        const randomNumber = Math.floor(Math.random() * 7)
+        const randomColor = colors[randomNumber]
+        document.body.style.backgroundColor = randomColor
+    }
+</script>
