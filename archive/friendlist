@@ -1,0 +1,19 @@
+<input type="text" id="friendName" placeholder="Type something...">
+<button onclick="addFriend()">Add Friend</button>
+<button onclick="log()">Log</button>
+
+<script defer>
+    // Variables
+    const friends = []
+    const friendBox = document.querySelector("#friendName")
+
+    // Add Friend
+    function addFriend() {
+        friends.push(friendBox.value)
+    }
+
+    // Log Friends
+    function log() {
+        console.log(friends)
+    }
+</script>
