@@ -1,0 +1,23 @@
+<button style="width: 200px; height: 200px; font-size: 30px;" onclick="countClicks()"><b>Click Me!</b></button>
+
+<br>
+<br>
+
+<button style="width: 200px; height: 200px; font-size: 30px;" onclick="checkClicks()"><b>Click Me (100 Required)!</b></button>
+
+<script>
+    let clicks = 0;
+
+    function countClicks() {
+        clicks += 1;
+        console.log("Clicks: " + clicks);
+    }
+</script>
+
+<script>
+    function checkClicks() {
+        if (clicks >= 100) {
+            alert("Congrats!");
+        }
+}
+</script>
