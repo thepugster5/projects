@@ -1,0 +1,33 @@
+<style>
+    .button {
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        filter: brightness(85%);
+    }
+</style>
+
+<button class="button" onclick="choosePokemon(0)" style="background-color: skyblue;"></button>
+<button class="button" onclick="choosePokemon(1)" style="background-color: orange;"></button>
+<button class="button" onclick="choosePokemon(2)" style="background-color: lime;"></button>
+<button class="button" onclick="choosePokemon(3)" style="background-color: yellow;"></button>
+
+<script defer>
+    // Variables
+    const pokemon = [
+        { name: "Squirtle", type: "Water" },
+        { name: "Charmander", type: "Fire"},
+        { name: "Bulbasaur", type: "Grass"},
+        { name: "Pikachu", type: "Electric"}
+    ]
+
+    function choosePokemon(index) {
+    let p = pokemon[index];
+    console.log("You chose: " + p.name + "! Type: " + p.type + "!");
+}
+</script>
