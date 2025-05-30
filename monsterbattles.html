@@ -1,0 +1,149 @@
+<!-- Attacks Buttons -->
+<h1>Attacks</h1>
+<button onclick="punch()">Punch</button>
+<br>
+<br>
+<button onclick="scratch()">Scratch</button>
+<br>
+<br>
+<button onclick="tackle()">Tackle</button>
+<br>
+<br>
+<button onclick="skip()">Skip</button>
+
+<!-- Utilities Buttons -->
+<h1>Player Utilities</h1>
+<input type="number" id="hpBox" placeholder="Health...">
+<button onclick="changeHP()">Submit</button>
+<br>
+<br>
+<input type="number" id="dmgBox" placeholder="Damage...">
+<button onclick="changeDMG()">Submit</button>
+<br>
+<br>
+<input type="number" id="defBox" placeholder="Defense...">
+<button onclick="changeDEF()">Submit</button>
+
+<!-- Player Scripts -->
+<script>
+    // Player Variables
+    let playerHP = 100
+    let playerDMG = 10
+    let playerDEF = 3
+
+    // Attack 1: Punch
+    function punch() {
+        randomEnemy.hp -= playerDMG
+        console.log("Enemy HP: " + randomEnemy.hp)
+    }
+
+    // Attack 2: Scratch
+    function scratch() {
+        randomEnemy.hp -= (playerDMG - 2)
+        console.log("Enemy HP: " + randomEnemy.hp)
+    }
+
+    // Attack 3: Tackle
+    function tackle() {
+        randomEnemy.hp -= (playerDMG * 2)
+        playerHP -= (playerDMG)
+        console.log("Enemy HP: " + randomEnemy.hp)
+        console.log("Player HP: " + playerHP)
+    }
+
+    // Attack 4: Skip
+    function skip() {
+        // Does literally nothing.
+    }
+</script>
+
+<!-- Player Utility Scripts -->
+<script>
+    // Input Grabbers
+    const inputHP = document.querySelector("#hpBox")
+    const inputDMG = document.querySelector("#dmgBox")
+    const inputDEF = document.querySelector("#defBox")
+
+    // Function: ChangeHP
+    function changeHP() {
+        playerHP = parseInt(inputHP.value)
+        console.log("Player Health: " + playerHP)
+    }
+
+    // Function: ChangeDMG
+    function changeDMG() {
+        playerDMG = parseInt(inputDMG.value)
+        console.log("Player Damage: " + playerDMG)
+    }
+
+    // Function: ChangeDEF
+    function changeDEF() {
+        playerDEF = parseInt(inputDEF.value)
+        console.log("Player Defense: " + playerDEF)
+    }
+</script>
+
+<!-- Enemy Scripts -->
+<script defer="">
+    // Variables
+    const enemy = [
+        { // Goblin
+            name: "Goblin",
+            hp: 50,
+            damage: 5,
+            defense: 1,
+            moves: [
+                { name: "Punch", damage: "" },
+                { name: "Tackle", damage: "" },
+                { name: "Jab", damage: "" },
+                { name: "Plunder", damage: "" }
+            ]
+        },
+        
+        { // Skeleton
+            name: "Skeleton",
+            hp: 40,
+            damage: 7,
+            defense: 0,
+            moves: [
+                { name: "Crush", damage: "" },
+                { name: "Reform", damage: "" },
+                { name: "Bone Throw", damage: "" },
+                { name: "Arrow Shot", damage: "" }
+            ]
+        },
+        
+        { // Zombie
+            name: "Zombie",
+            hp: 75,
+            damage: 10,
+            defense: 3,
+            moves: [
+                { name: "Punch", damage: "" },
+                { name: "Body Slam", damage: "" },
+                { name: "Bite", damage: "" },
+                { name: "Rot", damage: "" }
+            ]
+        },
+        
+        { // Dragon
+            name: "Dragon",
+            hp: 200,
+            damage: 25,
+            defense: 10,
+            moves: [
+                { name: "Scratch", damage: "" },
+                { name: "Divebomb", damage: "" },
+                { name: "Tail Whack", damage: "" },
+                { name: "Fire Breath", damage: "" }
+            ]
+        }
+    ]
+
+    // Randomise Enemy
+    const randomNumber = Math.floor(Math.random() * 4)
+    const randomEnemy = enemy[randomNumber]
+
+    // Log Enemy + Health
+    console.log("Enemy: " + randomEnemy.name + "\nHealth: " + randomEnemy.hp)
+</script>
