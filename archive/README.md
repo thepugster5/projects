@@ -1,9 +1,10 @@
 # Project Archive
 
-A folder filled with basic HTML projects.
+This folder contains various small projects and experiments I’ve worked on. I've organised them into categories for easy viewing.
 
-## Features
-- Basic clicker games
-- Mechanic testing
-- Minigames
-- More...
+## Categories
+- Clickers
+- Utilities
+- Games
+- Logic
+- Demos
