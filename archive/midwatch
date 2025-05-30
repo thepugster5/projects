@@ -1,0 +1,27 @@
+<span id="timeDisplay" style="font-size: 60px; font-family: 'Comic Sans MS';"><b>0.00</b></span>
+<br>
+<button onclick="stopwatchStart()">Start</button>
+
+<script>
+    // Time Variable
+    let time = 0
+
+    // Time Display
+    const timeDisplay = document.querySelector("#timeDisplay")
+    
+    // Add Time
+    function addTime() {
+        time += 0.01
+        timeDisplay.innerText = time.toFixed(2)
+        console.log("Time Added")
+    }
+    
+    // setInterval ID
+    let stopwatch
+
+    // Stopwatch Start
+    function stopwatchStart() {
+        stopwatch = setInterval(addTime, 10)
+        console.log("Stopwatch Started")
+    }
+</script>
