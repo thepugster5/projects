@@ -8,3 +8,5 @@ This folder contains various small projects and experiments I’ve worked on. I'
 - Games
 - Logic
 - Demos
+
+Note: A few versions have been lost due to forgetting to copy and paste or overwriting files.
