@@ -1,0 +1,33 @@
+<style>
+    .switch {
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+        margin: 5px;
+        cursor: pointer;
+        background-color: whitesmoke;
+    }
+
+    .switch:hover {
+        filter: brightness(85%);
+    }
+</style>
+
+<button class="switch" id="switch" onclick="toggleLight()">Light Switch</button>
+
+<script>
+    let lightOn = false
+    const light = document.querySelector("#switch")
+    
+    function toggleLight() {
+        if (!lightOn) {
+            lightOn = true
+            console.log("Light on!")
+            light.style.backgroundColor = "yellow"
+        } else if (lightOn) {
+            lightOn = false
+            console.log("Lights out!")
+            light.style.backgroundColor = "whitesmoke"
+        }
+    }
+</script>
