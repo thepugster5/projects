@@ -1,0 +1,189 @@
+<!-- Style ------------------------------------------------------------->
+
+<style>
+    /* Slot Style */
+    .cell {
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+        margin: 5px;
+        font-size: 150px;
+        cursor: pointer;
+    }
+
+    /* Slot Hover Style */
+    .cell:hover {
+        filter: brightness(85%);
+    }
+</style>
+
+<!-- Buttons ----------------------------------------------------------->
+
+<!-- Row #1 -->
+<button onclick="cycle1()" class="cell" id="cell1"><b>&nbsp;</b></button>
+<button onclick="cycle2()" class="cell" id="cell2"><b>&nbsp;</b></button>
+<button onclick="cycle3()" class="cell" id="cell3"><b>&nbsp;</b></button>
+
+<br>
+
+<!-- Row #2 -->
+<button onclick="cycle4()" class="cell" id="cell4"><b>&nbsp;</b></button>
+<button onclick="cycle5()" class="cell" id="cell5"><b>&nbsp;</b></button>
+<button onclick="cycle6()" class="cell" id="cell6"><b>&nbsp;</b></button>
+
+<br>
+
+<!-- Row #3 -->
+<button onclick="cycle7()" class="cell" id="cell7"><b>&nbsp;</b></button>
+<button onclick="cycle8()" class="cell" id="cell8"><b>&nbsp;</b></button>
+<button onclick="cycle9()" class="cell" id="cell9"><b>&nbsp;</b></button>
+
+<!-- Script ------------------------------------------------------------>
+
+<script defer>
+    // Slot Variables
+    let slot1 = 0
+    const cell1 = document.querySelector("#cell1")
+    let slot2 = 0
+    const cell2 = document.querySelector("#cell2")
+    let slot3 = 0
+    const cell3 = document.querySelector("#cell3")
+    let slot4 = 0
+    const cell4 = document.querySelector("#cell4")
+    let slot5 = 0
+    const cell5 = document.querySelector("#cell5")
+    let slot6 = 0
+    const cell6 = document.querySelector("#cell6")
+    let slot7 = 0
+    const cell7 = document.querySelector("#cell7")
+    let slot8 = 0
+    const cell8 = document.querySelector("#cell8")
+    let slot9 = 0
+    const cell9 = document.querySelector("#cell9")
+
+    // Cycle 1 Function
+    function cycle1() {
+        if (slot1 === 0) {
+            slot1 = 1
+            cell1.innerHTML = "<b>X</b>"
+        } else if (slot1 === 1) {
+            slot1 = 2
+            cell1.innerHTML = "<b>O</b>"
+        } else if (slot1 === 2) {
+            slot1 = 0
+            cell1.innerHTML = "<b>&nbsp;</b>"
+        }
+    }
+
+    // Cycle 2 Function
+    function cycle2() {
+        if (slot2 === 0) {
+            slot2 = 1
+            cell2.innerHTML = "<b>X</b>"
+        } else if (slot2 === 1) {
+            slot2 = 2
+            cell2.innerHTML = "<b>O</b>"
+        } else if (slot2 === 2) {
+            slot2 = 0
+            cell2.innerHTML = "<b>&nbsp;</b>"
+        }
+    }
+
+    // Cycle 3 Function
+    function cycle3() {
+        if (slot3 === 0) {
+            slot3 = 1
+            cell3.innerHTML = "<b>X</b>"
+        } else if (slot3 === 1) {
+            slot3 = 2
+            cell3.innerHTML = "<b>O</b>"
+        } else if (slot3 === 2) {
+            slot3 = 0
+            cell3.innerHTML = "<b>&nbsp;</b>"
+        }
+    }
+
+    // Cycle 4 Function
+    function cycle4() {
+        if (slot4 === 0) {
+            slot4 = 1
+            cell4.innerHTML = "<b>X</b>"
+        } else if (slot4 === 1) {
+            slot4 = 2
+            cell4.innerHTML = "<b>O</b>"
+        } else if (slot4 === 2) {
+            slot4 = 0
+            cell4.innerHTML = "<b>&nbsp;</b>"
+        }
+    }
+
+    // Cycle 5 Function
+    function cycle5() {
+        if (slot5 === 0) {
+            slot5 = 1
+            cell5.innerHTML = "<b>X</b>"
+        } else if (slot5 === 1) {
+            slot5 = 2
+            cell5.innerHTML = "<b>O</b>"
+        } else if (slot5 === 2) {
+            slot5 = 0
+            cell5.innerHTML = "<b>&nbsp;</b>"
+        }
+    }
+
+    // Cycle 6 Function
+    function cycle6() {
+        if (slot6 === 0) {
+            slot6 = 1
+            cell6.innerHTML = "<b>X</b>"
+        } else if (slot6 === 1) {
+            slot6 = 2
+            cell6.innerHTML = "<b>O</b>"
+        } else if (slot6 === 2) {
+            slot6 = 0
+            cell6.innerHTML = "<b>&nbsp;</b>"
+        }
+    }
+
+    // Cycle 7 Function
+    function cycle7() {
+        if (slot7 === 0) {
+            slot7 = 1
+            cell7.innerHTML = "<b>X</b>"
+        } else if (slot7 === 1) {
+            slot7 = 2
+            cell7.innerHTML = "<b>O</b>"
+        } else if (slot7 === 2) {
+            slot7 = 0
+            cell7.innerHTML = "<b>&nbsp;</b>"
+        }
+    }
+
+    // Cycle 8 Function
+    function cycle8() {
+        if (slot8 === 0) {
+            slot8 = 1
+            cell8.innerHTML = "<b>X</b>"
+        } else if (slot8 === 1) {
+            slot8 = 2
+            cell8.innerHTML = "<b>O</b>"
+        } else if (slot8 === 2) {
+            slot8 = 0
+            cell8.innerHTML = "<b>&nbsp;</b>"
+        }
+    }
+
+    // Cycle 9 Function
+    function cycle9() {
+        if (slot9 === 0) {
+            slot9 = 1
+            cell9.innerHTML = "<b>X</b>"
+        } else if (slot9 === 1) {
+            slot9 = 2
+            cell9.innerHTML = "<b>O</b>"
+        } else if (slot9 === 2) {
+            slot9 = 0
+            cell9.innerHTML = "<b>&nbsp;</b>"
+        }
+    }
+</script>
