@@ -1,0 +1,39 @@
+body {
+    font-family: "Comic Sans MS", arial;
+}
+
+.display {
+    background-color: #ededed;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.displayText {
+    font-size: 75px;
+    margin: 25px;
+}
+
+.cpsDisplayText {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.titleText {
+    font-size: 55px;
+    margin: 15px;
+}
+
+.button {
+    width: 150px;
+    height: 75px;
+    background-color: #ededed;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 5px;
+    font-family: "Comic Sans MS", arial;
+}
+
+.button:hover {
+    filter: brightness(95%)
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <audio id="clickSound" src="click-sound.mp3"></audio>
+    <audio id="quackSound1" src="quack-1.mp3"></audio>
+    <audio id="quackSound2" src="quack-2.mp3"></audio>
+    <audio id="quackSound3" src="quack-3.mp3"></audio>
+    <title>Clicker v3</title>
+</head>
+<body>
+    <div class="display">
+        <span id="clickDisplay" class="displayText"></span>
+    </div>
+
+    <span id="cpsDisplay" class="cpsDisplayText">Clicks Per Second:</span>
+
+    <br>
+
+    <button onclick="addClick()" class="button">Click</button>
+    <button onclick="shop1()" class="button">+1 CPS ($25)</button>
+    <button onclick="resetStats()" class="button" style="color: red; border-color: red;">Reset Game</button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <span class="titleText">Fun (1000 clicks required)</span>
+
+    <br>
+
+    <button disabled onclick="randomColor()" id="randomColorButton" class="button">Random BG</button>
+    <button disabled onclick="quack()" id="quackButton" class="button">Quack</button>
+
+    <script src="index.js"></script>
+</body>
+</html>
