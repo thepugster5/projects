@@ -1,11 +1,10 @@
-# Clicker Game v4
+# Clicker Game v3
 
-A simple clicker game I made which focuses more on gameplay and QoL rather than just mechanics like the earlier editions.
+A simple clicker game I made which has a few extra additions.
 
 ## Features
-- Dynamic Stat Displays
-- Special Menus (Settings, Statistics, Achievements)
-- Prestige + Currency (currently unused)
-- Toggleable Sound Effects
-- Light/Dark Mode
-- And more...
+- Dynamic Clicks & CPS Displays
+- +1 CPS Button which is consistently $25.
+- Reset Game Button
+- Autosaves
+- Two random fun additions: The Quack Button and the Random Color Button.
