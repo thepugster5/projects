@@ -7,3 +7,5 @@ A simple clicker game where you can collect, double, halve, and reset coins.
 - Reset button
 - Doubling/Halving logic
 - Alert messages
+
+- hi
