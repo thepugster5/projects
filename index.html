@@ -1,19 +1,94 @@
-<html>
-  <head>
-    <title>Link Hub</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <audio src="click-sound.mp3" id="clickSound"></audio>
+    <title>Document</title>
+</head>
+<body>
+    <div class="settingsMenu">
+        <button onclick="closeMenus()" class="button">Close</button>
+        <button onclick="toggleSound()" class="button">SFX</button>
+        <button onclick="toggleLighting()" class="button">Light/Dark</button>
+        <button onclick="toggleReset()" class="button">Reset</button>
+    </div>
 
-  <body>
-    <h1>Clicker v1</h1>
-    <a href="https://thepugster5.github.io/projects/clicker-v1/v1.0/">Clicker v1 (1.0)</a>
+    <div class="resetMenu">
+        <button onclick="factoryReset()" class="button">Yes</button>
+        <button onclick="closeMenus()" class="button">No</button>
+    </div>
 
-    <h1>Clicker v2</h1>
-    <a href="https://thepugster5.github.io/projects/clicker-v2/v1.0/">Clicker v2 (1.0)</a>
+    <div class="statMenu">
+        <span id="currentClicks" class="menuText">Current Clicks: </span>
+        <br>
+        <span id="totalClicks" class="menuText">Total Clicks: </span>
+        <br>
+        <span id="currentMultiplier" class="menuText">Multiplier: </span>
+        <br>
+        <span id="totalPrestige" class="menuText">Prestiges: </span>
+        <br>
+        <span id="timePlayed" class="menuText">Time Played: </span>
+        <br>
+        <span id="currentCPS" class="menuText">CPS: </span>
+        <br>
+        <span id="timesClicked" class="menuText">Times Clicked: </span>
+    </div>
 
-    <h1>Clicker v3</h1>
-    <a href="https://thepugster5.github.io/projects/clicker-v3/v1.0/">Clicker v3 (1.0)</a>
+    <div class="achievementMenu">
+        <span id="clicksI" class="menuText">Click 100 Times: </span>
+        <br>
+        <span id="clicksII" class="menuText">Gain 500 Clicks: </span>
+        <br>
+        <span id="upgradesI" class="menuText">Buy 1 Click Upgrade: </span>
+        <br>
+        <span id="upgradesII" class="menuText">Buy 10 Click Upgrades: </span>
+        <br>
+        <span id="prestigeI" class="menuText">Prestige Once: </span>
+    </div>
 
-    <h1>Archive</h1>
-    <a href="https://thepugster5.github.io/projects/archive/index.html">Archive</a>
-  </body>
+    <div onclick="closeMenus()" class="screenBlur">
+        <!-- Empty ahh -->
+    </div>
+
+    <div class="displayBox">
+        <span id="clickDisplay" class="clickDisplay"></span>
+        <br>
+        <span id="prestigeBucksDisplay" class="prestigeBucksDisplay">[N/A]</span>
+    </div>
+
+    <span id="cpsDisplay" class="statDisplay">Clicks/sec:</span>
+    <span id="multDisplay" class="statDisplay">| Multiplier:</span>
+    <span id="mpcDisplay" class="statDisplay">| $/click:</span>
+    <span id="prestigeDisplay" class="statDisplay">| Prestige Multiplier:</span>
+
+    <br>
+    <br>
+
+    <button onclick="addClick()" class="button">Click Me!</button>
+    <button onclick="prestige()" class="button">Prestige</button>
+
+    <br>
+    <br>
+
+    <span class="title">Shop</span>
+
+    <br>
+
+    <button onclick="buyCPS()" class="button">+1 CPS</button>
+    <span id="cpsPriceDisplay" class="statDisplay">Price: $</span>
+    <button onclick="buyMult()" class="button">+1 Mult</button>
+    <span id="multPriceDisplay" class="statDisplay">Price: $</span>
+
+    <br>
+    <br>
+
+    <button onclick="toggleSettings()" class="button" style="width: 50px; height: 50px; text-shadow: 0px 0px 3px #000000;">⚙️</button>
+    <button onclick="viewStats()" class="button" style="width: 50px; height: 50px; text-shadow: 0px 0px 3px #000000;">📊</button>
+    <button onclick="viewAchievements()" class="button" style="width: 50px; height: 50px; text-shadow: 0px 0px 3px #000000;">🥇</button>
+
+    <script src="index.js"></script>
+    <script src="achievements.js"></script>
+</body>
 </html>

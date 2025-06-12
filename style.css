@@ -1,0 +1,206 @@
+body {
+    font-family: "Comic Sans MS", arial;
+}
+
+.darkMode {
+    background-color: #444444;
+}
+
+.displayBox {
+    margin: 5px;
+    background-color: #ededed;
+    border-radius: 20px;
+    border: 3px solid #dddddd;
+    color: #000000;
+}
+
+body.darkMode .displayBox {
+    background-color: #555555;
+    border: 3px solid #666666;
+    color: #ffffff;
+}
+
+.clickDisplay {
+    font-size: 100px;
+    margin: 5px;
+}
+
+.prestigeBucksDisplay {
+    font-size: 50px;
+    margin: 5px;
+    color: #770077;
+}
+
+body.darkMode .prestigeBucksDisplay {
+    color: #cc00cc;
+}
+
+.statDisplay {
+    margin: 5px;
+    color: #000000;
+}
+
+body.darkMode .statDisplay {
+    color: #ffffff;
+}
+
+.title {
+    margin: 5px;
+    color: #000000;
+}
+
+body.darkMode .title {
+    color: #ffffff;
+}
+
+.button {
+    color: #000000;
+    width: 125px;
+    height: 125px;
+    font-family: "Comic Sans MS", arial;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #ededed;
+    border: 3px solid #dddddd;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(95%)
+}
+
+body.darkMode .button {
+    color: #ededed;
+    background-color: #555555;
+    border: 3px solid #666666;
+}
+
+.settingsMenu {
+    width: 70%;
+    height: 96%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 3px solid #dddddd;
+    position: fixed;
+    visibility: hidden;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 0px 10px #cccccc;
+    z-index: 20;
+}
+
+body.settings .settingsMenu {
+    visibility: visible;
+}
+
+body.darkMode .settingsMenu {
+    background-color: #3a3a3a;
+    border: 3px solid #2a2a2a;
+}
+
+.resetMenu {
+    width: 70%;
+    height: 96%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 3px solid #dddddd;
+    position: fixed;
+    visibility: hidden;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 0px 10px #cccccc;
+    z-index: 20;
+}
+
+body.reset .resetMenu {
+    visibility: visible;
+}
+
+body.darkMode .resetMenu {
+    background-color: #3a3a3a;
+    border: 3px solid #2a2a2a;
+}
+
+.statMenu {
+    width: 70%;
+    height: 96%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 3px solid #dddddd;
+    position: fixed;
+    visibility: hidden;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 0px 10px #cccccc;
+    z-index: 20;
+}
+
+body.stats .statMenu {
+    visibility: visible;
+}
+
+body.darkMode .statMenu {
+    background-color: #3a3a3a;
+    border: 3px solid #2a2a2a;
+}
+
+.achievementMenu {
+    width: 70%;
+    height: 96%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 3px solid #dddddd;
+    position: fixed;
+    visibility: hidden;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 0px 10px #cccccc;
+    z-index: 20;
+}
+
+body.achievements .achievementMenu {
+    visibility: visible;
+}
+
+body.darkMode .achievementMenu {
+    background-color: #3a3a3a;
+    border: 3px solid #2a2a2a;
+}
+
+.screenBlur {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0.2;
+    z-index: 10;
+}
+
+body.settings .screenBlur {
+    visibility: visible;
+}
+
+body.reset .screenBlur {
+    visibility: visible;
+}
+
+body.stats .screenBlur {
+    visibility: visible;
+}
+
+body.achievements .screenBlur {
+    visibility: visible;
+}
+
+.menuText {
+    color: #000000;
+    font-family: "Comic Sans MS", arial;
+    font-size: 40px;
+    margin: 20px;
+}
+
+body.darkMode .menuText {
+    color: #ffffff;
+}
