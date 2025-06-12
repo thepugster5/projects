@@ -1,6 +1,6 @@
 # Clicker Game v3
 
-A simple clicker game where you can collect, double, halve, and reset coins.
+A simple clicker game I made which focuses more on gameplay and QoL rather than just mechanics like the earlier editions.
 
 ## Features
 - Dynamic Stat Displays
