@@ -117,7 +117,7 @@ function prestige() {
         clickSound.currentTime = 0
         clickSound.play()
     } else if (clicks < 10000) {
-        alert(`You need 10000 Clicks to Prestige. (${parseInt(clicks)}/10000)`)
+        alert(`You need 100,000 Clicks to Prestige. (${parseInt(clicks)}/100,000)`)
         clickSound.currentTime = 0
         clickSound.play()
     }
