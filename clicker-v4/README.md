@@ -4,6 +4,7 @@ A simple clicker game I made which focuses more on gameplay and QoL rather than 
 
 ## Features
 - Dynamic Stat Displays
+- Autosaves
 - Special Menus (Settings, Statistics, Achievements)
 - Prestige + Currency (currently unused)
 - Toggleable Sound Effects
