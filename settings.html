@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <audio src="click-sound.mp3" id="clickSound"></audio>
+    <title>Settings | The Lobby</title>
+    <link rel="icon" href="house.png">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="headerLink">Home</a>
+        <a href="links.html" class="headerLink">Links</a>
+        <a href="files.html" class="headerLink">Files</a>
+        <span class="headerLink headerSelected" >Settings</span>
+    </header>
+
+    <span class="heading">Cosmetic</span>
+
+    <br>
+    
+    <span class="bodyText">Light/Dark Mode:</span>
+    <button onclick="toggleLighting()" class="button">Toggle</button>
+
+    <br>
+
+    <span class="bodyText">Sound Effects:</span>
+    <button onclick="toggleSound()" class="button">Toggle</button>
+
+    <script src="index.js" defer></script>
+</body>
+</html>
